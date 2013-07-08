@@ -1,3 +1,4 @@
+.settings
 api/target*
 impl/target*
 pack/target*
