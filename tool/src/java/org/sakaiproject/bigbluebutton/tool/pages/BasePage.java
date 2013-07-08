@@ -44,6 +44,7 @@ public class BasePage extends WebPage implements IHeaderContributor {
 	Link<Void> firstLink;
 	Link<Void> secondLink;
 	Link<Void> thirdLink;
+	Link<Void> meetinglistLink;
 	
 	FeedbackPanel feedbackPanel;
 	
@@ -51,6 +52,17 @@ public class BasePage extends WebPage implements IHeaderContributor {
 		
 		log.debug("BasePage()");
 		
+		//first link: Meetings
+		meetinglistLink = new Link<Void>("meetinglistLink") {
+			private static final long serialVersionUID = 1L;
+			public void onClick() {
+				setResponsePage(new MeetinglistPage());
+			}
+		};
+		meetinglistLink.add(new Label("meetinglistLinkLabel",new StringResourceModel("link.meetinglist", null, new String[] {"3"})).setRenderBodyOnly(true));
+		meetinglistLink.add(new AttributeModifier("title", true, new ResourceModel("link.meetinglist.tooltip")));
+		add(meetinglistLink);
+
 		
     	//first link
 		firstLink = new Link<Void>("firstLink") {

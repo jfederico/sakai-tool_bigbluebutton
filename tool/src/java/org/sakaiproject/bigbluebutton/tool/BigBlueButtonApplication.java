@@ -18,7 +18,7 @@ import org.sakaiproject.bigbluebutton.tool.pages.FirstPage;
  * @author Steve Swinsburg (steve.swinsburg@anu.edu.au)
  *
  */
-public class MyApplication extends WebApplication {    
+public class BigBlueButtonApplication extends WebApplication {    
    
 	/**
 	 * Configure your app here
@@ -75,7 +75,7 @@ public class MyApplication extends WebApplication {
 	/**
      * Constructor
      */
-	public MyApplication()
+	public BigBlueButtonApplication()
 	{
 	}
 	
